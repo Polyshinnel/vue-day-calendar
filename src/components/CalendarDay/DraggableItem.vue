@@ -80,7 +80,10 @@ const acceptRecord = () => {
         id: props.container_info.id,
         timeStart: time_start.value,
         timeDuration: time_duration.value,
-        active: visibleItem.value
+        active: visibleItem.value,
+        offset: parseInt(props.container_info.top),
+        startTime: startTimeStr.value,
+        endTime: endTimeStr.value
     })
 
     emits('customChange', timeObj)
@@ -124,7 +127,7 @@ const acceptRecord = () => {
     position: absolute !important;
     left: 0;
 
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 0 0, linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 15px 15px; height: 200px; top: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 0 0, linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 60px 60px; height: 200px; top: 0;
 }
 
 .current-calendar-record{
